@@ -25,7 +25,7 @@ class DarkMode < Button
   end
 
   def draw_button
-    paint(label_text, set_location(x_coordinate, y_coordinate), set_foreground, choose_color('#111111')
+    paint(label_text, set_location, set_foreground, choose_color(color))
   end
 end
 
@@ -45,6 +45,18 @@ class LightMode < Button
   end
 
   def draw_button
-    paint(label_text, set_location(x_coordinate, y_coordinate),  set_foreground, choose_color('#E0E0E0'))
+    paint(label_text, set_location,  set_foreground, choose_color(color))
   end
 end
+
+dark_button = DarkMode.new
+light_button = LightMode.new
+
+dark_button.set_location(10, 10)
+dark_button.choose_color('#111111')
+
+light_button.choose_color('#E0E0E0')
+light_button.set_location(20, 20)
+
+dark_button.draw_button
+light_button.draw_button
