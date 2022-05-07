@@ -10,13 +10,13 @@ class Button
 end
 
 class DarkMode < Button 
-  def draw_dark_button
+  def draw_button
     paint(label_text, x_coordinate, y_coordinate, foreground_color - 10, '#111111')
   end
 end
 
 class LightMode < Button 
-  def draw_light_button
+  def draw_button
     paint(label_text, x_coordinate, y_coordinate, foreground_color + 10, '#E0E0E0')
   end
 end
